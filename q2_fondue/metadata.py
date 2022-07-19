@@ -76,6 +76,7 @@ def _execute_efetcher(email, n_jobs, run_ids, log_level, logger):
 
         meta_df.append(df)
         missing_ids.update(missing_ids)
+        del efetcher
 
     return pd.concat(meta_df, axis=0), missing_ids
 
